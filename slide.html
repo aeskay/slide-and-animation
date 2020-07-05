@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style type="text/css">
+    
+   /** img{
+      animation-name: imganim;
+      animation-duration: 4s
+    }
+
+    @keyframes imganim{
+      0% {opacity: 0.4};
+      100%{opacity: 1};
+    }
+
+    **/
+    #divCont{
+      text-align: center;
+
+    }
+    #divCon{
+      text-align: left;
+      padding-right: 50px;
+      padding-top: 70px;
+    }
+
+
+   .start{
+      animation-name: slideIn;
+      animation-duration: 6s;
+      animation-fill-mode: forwards;
+      position: relative;
+    }
+
+    @keyframes slideIn{
+      0%{
+        display: none;
+        opacity: 0.2;
+        left: -200px;
+      }
+      100%{
+        display: block;
+        opacity: 1;
+        left:0px;
+      }
+    } 
+
+    .start2{
+      animation-name: slideIn2;
+      animation-duration: 6s;
+      animation-fill-mode: forwards;
+      position: relative;
+    }
+
+    @keyframes slideIn2{
+      0%{
+        display: none;
+        opacity: 0.2;
+        left: 200px;
+      }
+      100%{
+        display: block;
+        opacity: 1;
+        left:0px;
+      }
+    } 
+    
+    .stop{
+      display: none;
+    }    
+
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+
+  <script src="wpt/lib/jquery.waypoints.min.js"></script>
+  <script src="wpt/lib/shortcuts/inview.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="slide">
+
+    <img name = "slider" width="100%" style="height: 97vh" id="slider" ></img>
+  </div>
+
+   <p>You can just load add this script to your site as-is for a standard fade in element option. ... position on the screen and if it is in view it will start the animation. ... This CSS starts the div off to the left and will animate back to a 0px left margin. ... in some fade in elements can do for making your page come alive.You can just load add this script to your site as-is for a standard fade in element option. ... position on the screen and if it is in view it will start the animation. ... This CSS starts the div off to the left and will animate back to a 0px left margin. ... in some fade in elements can do for making your page come alive.</p> <p>You can just load add this script to your site as-is for a standard fade in element option. ... position on the screen and if it is in view it will start the animation. ... This CSS starts the div off to the left and will animate back to a 0px left margin. ... in some fade in elements can do for making your page come alive.You can just load add this script to your site as-is for a standard fade in element option. ... position on the screen and if it is in view it will start the animation. ... This CSS starts the div off to the left and will animate back to a 0px left margin. ... in some fade in elements can do for making your page come alive.</p>
+
+
+  <div class="row" style="margin: 20px;">
+    <div class="col-sm-6" id="divCont">
+      <img src="5.jpg" width="500px" id="slideIn1">
+    </div>
+    <div class="col-sm-6" id="divCon">
+      <p id="clickHere1">You can just load add this script to your site as-is for a standard fade in element option. ... position on the screen and if it is in view it will start the animation. ... This CSS starts the div off to the left and will animate back to a 0px left margin. ... in some fade in elements can do for making your page come alive.You can just load add this script to your site as-is for a standard fade in element option. ... position on the screen and if it is in view it will start the animation. ... This CSS starts the div off to the left and will animate back to a 0px left margin. ... in some fade in elements can do for making your page come alive.</p>
+    </div>
+  </div>
+
+  <div class="row" style="margin: 20px;">
+    
+    <div class="col-sm-6" id="divCon">
+      <p id="clickHere2">You can just load add this script to your site as-is for a standard fade in element option. ... position on the screen and if it is in view it will start the animation. ... This CSS starts the div off to the left and will animate back to a 0px left margin. ... in some fade in elements can do for making your page come alive.You can just load add this script to your site as-is for a standard fade in element option. ... position on the screen and if it is in view it will start the animation. ... This CSS starts the div off to the left and will animate back to a 0px left margin. ... in some fade in elements can do for making your page come alive.</p>
+    </div>
+    <div class="col-sm-6" id="divCont">
+      <img src="3.jpg" width="500px" id="slideIn2">
+    </div>
+  </div>
+
+  <div class="row" style="margin: 20px;">
+    <div class="col-sm-6" id="divCont">
+      <img src="1.jpg" width="500px" id="slideIn3">
+    </div>
+    <div class="col-sm-6" id="divCon">
+      <p id="clickHere3">You can just load add this script to your site as-is for a standard fade in element option. ... position on the screen and if it is in view it will start the animation. ... This CSS starts the div off to the left and will animate back to a 0px left margin. ... in some fade in elements can do for making your page come alive.You can just load add this script to your site as-is for a standard fade in element option. ... position on the screen and if it is in view it will start the animation. ... This CSS starts the div off to the left and will animate back to a 0px left margin. ... in some fade in elements can do for making your page come alive.</p>
+    </div>
+  </div>
+
+<script type="text/javascript">
+    let img = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+
+    
+    var i = 0;
+    var timer = 7000;
+
+    
+
+    function changeImg(){
+
+    $(document).ready(function() {
+      
+
+      $("#slider").attr("src", img[i]);
+      $("#slider").fadeTo(900, 1.0).delay(5500);
+    });
+      
+      if (i < 4) {     
+        i++
+
+      } else {
+        i = 0;
+      }
+
+      $(document).ready(function() {
+      
+      $("#slider").fadeTo(500, 0.2);
+    });
+      setTimeout("changeImg()", timer);
+    }
+   
+
+    window.onload = changeImg();
+
+  /**$(document).ready(function() {
+      $("#slide").hide();
+
+      $("#demo").click(function() {
+        $("#slide").fadeIn(2000);
+      });
+      
+    }); **/
+  $(document).ready(function() {
+
+   
+   /**  $("#clickHere").click(function() {
+      $("#slideIn").show();
+      $("#slideIn").toggleClass("start");
+      }); **/
+    $("#slideIn1").hide();
+
+    var inview = new Waypoint.Inview({
+      element: $('#clickHere1')[0],
+      enter: function() {
+        $("#slideIn1").show();
+        $("#slideIn1").toggleClass("start");
+      },
+      
+    });
+
+    $("#slideIn2").hide();
+
+    var inview = new Waypoint.Inview({
+      element: $('#clickHere2')[0],
+      enter: function() {
+        $("#slideIn2").show();
+        $("#slideIn2").toggleClass("start2");
+      },
+      
+    });
+
+    $("#slideIn3").hide();
+
+    var inview = new Waypoint.Inview({
+      element: $('#clickHere3')[0],
+      enter: function() {
+        $("#slideIn3").show();
+        $("#slideIn3").toggleClass("start");
+      },
+      
+    });
+
+  });  
+
+
+ 
+</script>
+
+
+</body>
+</html>
